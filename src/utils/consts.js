@@ -1,5 +1,8 @@
 export default {
+  APP_PORT: 4000,
+  API_URL: 'http://localhost:4000/api',
   ACTIONS: {
-    GET_CREATIVES: 'GET_CREATIVES'
+    REQUEST_CREATIVES: 'REQUEST_CREATIVES',
+    RECEIVE_CREATIVES: 'RECEIVE_CREATIVES'
   }
 }

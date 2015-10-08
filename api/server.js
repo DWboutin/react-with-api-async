@@ -4,8 +4,6 @@ import bodyParser from 'body-parser';
 
 import MockedCreactives from './helpers/mocked-creatives';
 
-const port = process.env.PORT || 3000;
-
 let app = express();
 
 app.use(bodyParser.urlencoded({extended: true}));

@@ -49,7 +49,8 @@ gulp.task('buildWatch', ['build'], function(){
 });
 
 gulp.task('watch', function () {
-  gulp.watch('./**/*.js', ['buildWatch']);
+  gulp.watch('./src/**/*.js', ['buildWatch']);
+  gulp.watch('./api/**/*.js', ['buildWatch']);
   gulp.watch('*.html', notifyLiveReload);
 });
 

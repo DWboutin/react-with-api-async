@@ -1,11 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { fetchCreatives } from '../actions/creatives';
+import { API_URL } from '../utils/consts';
+
+import request from 'superagent';
 
 class Creatives extends React.Component {
+  componentWillMount() {
+    let { dispatch } = this.props;
+    dispatch( fetchCreatives() );
+  }
+
   buildRows() {
     const { creatives } = this.props;
 
-    return creatives.map((item) => {
+    return creatives.items.map((item) => {
       return (
         <tr key={item.bannerID + item.variationID}>
           <td>{item.bannerID}</td>
